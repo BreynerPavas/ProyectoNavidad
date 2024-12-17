@@ -24,21 +24,23 @@ const Products = () => {
         {
             
             products.map((product)=>{
-                return(
-                    <>
-                    <li className="col-12 col-md-6 col-lg-3">
-              <div className="cnt-block equal-hight altura">
-                <img src={'./src/assets/imgProducts.webp'} className="img-responsive" alt=""/>
+              return (
                 
-                <h3><Link to={"/ProductByID/id/"+product.id}>{product.name_product}</Link></h3>
+
+                  <li className="col-12 col-md-6 col-lg-3" key={product.id}>
+                    <div className="cnt-block equal-hight altura">
+                      <img src={'./src/assets/imgProducts.webp'} className="img-responsive" alt="" />
+
+                      <h3><Link to={"/ProductByID/id/" + product.id}>{product.name_product}</Link></h3>
+
+                      {/* aqui ira el link a buscar un producto por id */}
+                      <p>{product.price}</p>
+                    </div>
+                  </li>
+
                 
-                {/* aqui ira el link a buscar un producto por id */}
-                <p>{product.price}</p>
-              </div>
-          </li>
-                    </>
-                )
-                
+              )
+
             })
             
         }

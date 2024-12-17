@@ -38,8 +38,8 @@ export const ProductProvider = ({children}) => {
     <ProductContext.Provider
       value={{
         products: state.products,
-        getProducts,getProductByID,
-        product:state.product
+        getProducts,
+        product:state.product,getProductByID
       }}
     >
       {children}

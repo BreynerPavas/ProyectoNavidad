@@ -1,4 +1,8 @@
+@import "./../../colors.scss";
 a{
     padding: 5px;
     text-decoration: none;
+}
+.login{
+    background-color: $primary-color !important;
 }

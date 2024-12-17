@@ -7,6 +7,8 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
 import ProductByID from './components/ProductByID/ProductByID'
+import FormRegister from './components/FormRegister/FormRegister'
+import FormLogin from './components/FormLogin/FormLogin'
 
 function App() {
 
@@ -20,7 +22,9 @@ function App() {
         <Route path='/' element={<Home/>} />       
         <Route path='/Products' element={<Products/>} />    
         <Route path='/ProductByID/id/:id' element={<ProductByID/>} />    
-                  
+        <Route path='/RegisterUser' element={<FormRegister/>}/>
+        <Route path='/LoginUser' element={<FormLogin/>}/>
+
       </Routes>
       <Footer/>
       </ProductProvider>
