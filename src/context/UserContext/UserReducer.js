@@ -3,8 +3,15 @@ const users = (state, action) => {
       case "POST_ADDUSER":
         return {
           ...state,
-          products: action.payload,
+          user: [action.payload]
+          
         };
+        case "LOGIN":
+      return {
+        ...state,
+        token: action.payload.token,
+        user: action.payload.user,
+      };
       default:
         return state;
     }

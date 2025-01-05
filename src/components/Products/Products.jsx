@@ -10,6 +10,7 @@ import './Products.scss';
 const Products = () => {
     const {products,getProducts} = useContext(ProductContext)
     
+    
     useEffect(()=>{
         getProducts()
         
@@ -29,12 +30,12 @@ const Products = () => {
 
                   <li className="col-12 col-md-6 col-lg-3" key={product.id}>
                     <div className="cnt-block equal-hight altura">
-                      <img src={'./src/assets/imgProducts.webp'} className="img-responsive" alt="" />
-
+                      
+                      <Link to={"/ProductByID/id/" + product.id}> <img src={'./src/assets/imgProducts.webp'} className="img-responsive" alt="" /></Link>
                       <h3><Link to={"/ProductByID/id/" + product.id}>{product.name_product}</Link></h3>
 
                       {/* aqui ira el link a buscar un producto por id */}
-                      <p>{product.price}</p>
+                      <p>{product.price}€</p>
                     </div>
                   </li>
 

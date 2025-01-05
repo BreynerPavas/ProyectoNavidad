@@ -9,6 +9,8 @@ import Home from './components/Home/Home'
 import ProductByID from './components/ProductByID/ProductByID'
 import FormRegister from './components/FormRegister/FormRegister'
 import FormLogin from './components/FormLogin/FormLogin'
+import { UserProvider } from './context/UserContext/UserState'
+import Profile from './components/Profile/Profile'
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
     <div className='container'>
       <BrowserRouter>
       <ProductProvider>
+        <UserProvider>
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>} />       
@@ -24,9 +27,11 @@ function App() {
         <Route path='/ProductByID/id/:id' element={<ProductByID/>} />    
         <Route path='/RegisterUser' element={<FormRegister/>}/>
         <Route path='/LoginUser' element={<FormLogin/>}/>
+        <Route path='/Profile' element={<Profile/>}/>
 
       </Routes>
       <Footer/>
+      </UserProvider>
       </ProductProvider>
     </BrowserRouter>
     </div>
