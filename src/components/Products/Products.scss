@@ -1,8 +1,11 @@
+@import "./../../colors.scss";
+
 .altura{
     height: 349px;
 }
 .img-responsive{
     border-radius: 0px;
+    
 }
 .row.heading h2 {
     color: #fff;
@@ -114,4 +117,9 @@ ul{
 }
 .our-webcoderskull .cnt-block .follow-us li .fa:hover{ 
    color:#025a8e;
+}
+.fa-plus-circle{
+    color: $primary-color ;
+    cursor: pointer;
+    font-size: 25px !important;
 }

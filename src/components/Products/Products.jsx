@@ -9,16 +9,24 @@ import './Products.scss';
 
 const Products = () => {
     const {products,getProducts} = useContext(ProductContext)
+    const car = []
     
     
     useEffect(()=>{
+      
         getProducts()
         
     },[]);
     
+    const addProductHandler = (e) => {
+      console.log(e.target);
+      car.push(e.target.id);
+      localStorage.setItem("car", JSON.stringify(car));
+    }
+    
     console.log("carga componente:",products)
   return (
-    <div>
+<div>
 <section className="our-webcoderskull padding-lg">
   <div className="container">
     <ul className="row">
@@ -36,6 +44,8 @@ const Products = () => {
 
                       {/* aqui ira el link a buscar un producto por id */}
                       <p>{product.price}€</p>
+                      <i onClick={addProductHandler} class="fa fa-plus-circle" aria-hidden="true" id={product.id}></i>
+
                     </div>
                   </li>
 
@@ -52,8 +62,7 @@ const Products = () => {
     </ul>
   </div>
 </section>
-    
-        </div>
+</div>
   )
 }
 

@@ -11,6 +11,7 @@ import FormRegister from './components/FormRegister/FormRegister'
 import FormLogin from './components/FormLogin/FormLogin'
 import { UserProvider } from './context/UserContext/UserState'
 import Profile from './components/Profile/Profile'
+import Cart from './components/Cart/Cart'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/RegisterUser' element={<FormRegister/>}/>
         <Route path='/LoginUser' element={<FormLogin/>}/>
         <Route path='/Profile' element={<Profile/>}/>
+        <Route path='/Cart' element={<Cart/>}/>
 
       </Routes>
       <Footer/>

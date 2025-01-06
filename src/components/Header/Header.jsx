@@ -22,6 +22,7 @@ const Header = () => {
           <li><Link to="/"className="nav-link px-2 text-white">Home</Link></li>
           <li><Link to="/Products" className="nav-link px-2 text-white  ">Products</Link></li>
           <li><Link to="/Profile" className="nav-link px-2 text-white  ">Profile</Link></li>
+          <li><Link to="/Cart" className="nav-link px-2 text-white  ">Cart</Link></li>
           
         </ul>
 

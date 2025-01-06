@@ -1,0 +1,9 @@
+@import "./../../colors.scss";
+
+.fa-shopping-basket{
+    color: $primary-color;
+    font-size: 30px !important;
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+}
